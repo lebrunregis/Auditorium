@@ -1,22 +1,27 @@
 using UnityEngine;
 
-public class CircleRendered : MonoBehaviour
+[RequireComponent (typeof(LineRenderer))]
+public class CircleRenderer : MonoBehaviour
 {
-    public LineRenderer lineRenderer;
+    private LineRenderer lineRenderer;
     public int steps = 90;
     public float radius = 1f;
-    public Color color = Color.white;
+    public Gradient gradient = new Gradient();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DrawCircle(steps, radius);
+        lineRenderer = GetComponent<LineRenderer> ();
+        lineRenderer.colorGradient = gradient;
+        lineRenderer.loop = true;
+        lineRenderer.useWorldSpace = false;
+       DrawCircle(steps, radius);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
 
     void DrawCircle(int steps, float radius)
@@ -27,7 +32,7 @@ public class CircleRendered : MonoBehaviour
         {
             float progress = (float)i / steps;
 
-            float radians = progress * Mathf.PI;
+            float radians = progress * 2 * Mathf.PI;
 
             float x = Mathf.Cos(radians);
             float y = Mathf.Sin(radians);
