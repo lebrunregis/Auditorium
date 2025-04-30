@@ -15,7 +15,7 @@ public class CircleRenderer : MonoBehaviour
         lineRenderer.colorGradient = gradient;
         lineRenderer.loop = true;
         lineRenderer.useWorldSpace = false;
-       DrawCircle(steps, radius);
+        DrawCircle(steps, radius);
     }
 
     // Update is called once per frame

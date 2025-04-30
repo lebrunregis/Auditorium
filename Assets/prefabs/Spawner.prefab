@@ -199,7 +199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleVelocity: {x: 0, y: 0}
-  particle: {fileID: 0}
   spawnTime: 0
 --- !u!114 &6411861185745303348
 MonoBehaviour:
@@ -213,6 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3d549778b58d7469d31b5a02389d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 4611460609548574947, guid: 55b7380a9a2cd7c49bc9b572891c2b43, type: 3}
   poolIncrement: 20
   maxSize: 100
