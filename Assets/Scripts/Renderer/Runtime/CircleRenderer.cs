@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent (typeof(LineRenderer))]
+[RequireComponent(typeof(LineRenderer))]
 public class CircleRenderer : MonoBehaviour
 {
     private LineRenderer lineRenderer;
@@ -11,7 +11,7 @@ public class CircleRenderer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer> ();
+        lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.colorGradient = gradient;
         lineRenderer.loop = true;
         lineRenderer.useWorldSpace = false;
@@ -21,7 +21,7 @@ public class CircleRenderer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
+
     }
 
     void DrawCircle(int steps, float radius)

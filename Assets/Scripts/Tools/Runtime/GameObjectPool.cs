@@ -21,7 +21,6 @@ namespace Tools
             for (int i = 0; i < amount; i++)
             {
                 GameObject go = Instantiate(prefab);
-                go.SetActive(false);
                 list.AddLast(go);
             }
         }
@@ -51,7 +50,7 @@ namespace Tools
             if (go == null && list.Count < maxSize)
             {
                 Allocate(poolIncrement);
-                go = list.Last.Value;
+                go = node.Next.Value;
             }
             return go;
         }

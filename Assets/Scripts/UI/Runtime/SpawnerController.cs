@@ -1,6 +1,7 @@
 using Tools;
 using UnityEngine;
 
+[RequireComponent(typeof(CircleRenderer))]
 [RequireComponent (typeof(CircleRenderer))]
 [RequireComponent (typeof(GameObjectPool))]
 public class SpawnerController : MonoBehaviour
@@ -29,6 +30,7 @@ public class SpawnerController : MonoBehaviour
             {
                 particle.transform.position = transform.position;
                 particle.SetActive(true);
+                //particle
             }
         }
     }

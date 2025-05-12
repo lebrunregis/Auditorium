@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(MeshCollider))]
-[RequireComponent (typeof(LineRenderer))]
+[RequireComponent(typeof(LineRenderer))]
 public class LineColliderGenerator : MonoBehaviour
 {
     private new MeshCollider collider;
@@ -11,9 +11,9 @@ public class LineColliderGenerator : MonoBehaviour
     void Start()
     {
         lineMesh = GetComponent<Mesh>();
-        lineRenderer = GetComponent<LineRenderer>(); 
+        lineRenderer = GetComponent<LineRenderer>();
         collider = GetComponent<MeshCollider>();
-        collider.sharedMesh =lineMesh;
+        collider.sharedMesh = lineMesh;
     }
 
     // Update is called once per frame
