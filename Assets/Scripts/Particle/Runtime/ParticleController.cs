@@ -10,7 +10,7 @@ public class ParticleController : MonoBehaviour
     public float m_timeToLive = 5;
     private float m_timeToLiveDelta = 5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         trailRenderer = GetComponent<TrailRenderer>();
@@ -19,8 +19,8 @@ public class ParticleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_timeToLive -= Time.deltaTime;
-        if (m_timeToLive < 0)
+        m_timeToLiveDelta -= Time.deltaTime;
+        if (m_timeToLiveDelta < 0)
         {
             gameObject.SetActive(false);
         }
@@ -30,11 +30,17 @@ public class ParticleController : MonoBehaviour
     {
         m_timeToLiveDelta = m_timeToLive;
         rb.linearVelocity = velocity;
-        trailRenderer.Clear();
     }
 
     public void ResetTrail()
     {
-         trailRenderer.Clear();
+        trailRenderer.Clear();
     }
+
+    public TrailRenderer GetTrail()
+    {
+        return trailRenderer;
+    }
+
+    public Rigidbody2D GetRigidbody() { return rb; }
 }

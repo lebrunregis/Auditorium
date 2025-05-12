@@ -50,7 +50,7 @@ namespace Tools
             if (go == null && list.Count < maxSize)
             {
                 Allocate(poolIncrement);
-                go = node.Next.Value;
+                go = list.Last.Value;
             }
             return go;
         }

@@ -47,11 +47,11 @@ public class DragAndDropHandle : MonoBehaviour
     {
         if (dragging)
         {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = cam.nearClipPlane;
-        Vector3 newPos = cam.ScreenToWorldPoint(mousePos);
-        newPos.z = 0;
-        draggedTransform.position = newPos;
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = cam.nearClipPlane;
+            Vector3 newPos = cam.ScreenToWorldPoint(mousePos);
+            newPos.z = 0;
+            draggedTransform.position = newPos;
         }
     }
 

@@ -61,7 +61,7 @@ public class DragAndDropResizer : MonoBehaviour
             Vector3 newPos = cam.ScreenToWorldPoint(mousePos);
             newPos.z = 0;
             float newScale = Vector3.Distance(transform.position, newPos);
-           // Debug.Log(newPos.ToString() + " " + newScale.ToString());
+            // Debug.Log(newPos.ToString() + " " + newScale.ToString());
             if (newScale < m_minScale)
             {
                 newScale = m_minScale;
