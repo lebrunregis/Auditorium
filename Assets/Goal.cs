@@ -11,7 +11,12 @@ public class Goal : MonoBehaviour
 
 
     #region Unity Api
-    private void OnTriggerEnter(Collider other)
+    private void OnEnable()
+    {
+        m_lineRenderer = GetComponent<LineRenderer>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger Entered");
         m_currentValue++;
