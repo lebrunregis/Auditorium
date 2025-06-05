@@ -10,13 +10,13 @@ namespace Tools
         public int maxSize = 100;
         public LinkedList<GameObject> list;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        private void Start()
         {
             list = new LinkedList<GameObject>();
             Allocate(poolIncrement);
         }
 
-        void Allocate(int amount)
+        private void Allocate(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
@@ -26,7 +26,7 @@ namespace Tools
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
 
         }

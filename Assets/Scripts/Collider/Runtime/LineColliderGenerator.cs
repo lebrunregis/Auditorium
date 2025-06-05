@@ -8,7 +8,7 @@ public class LineColliderGenerator : MonoBehaviour
     private LineRenderer lineRenderer;
     private Mesh lineMesh;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         lineMesh = GetComponent<Mesh>();
         lineRenderer = GetComponent<LineRenderer>();
@@ -17,7 +17,7 @@ public class LineColliderGenerator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
         lineRenderer.BakeMesh(lineMesh, true);

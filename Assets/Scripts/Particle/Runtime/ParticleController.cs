@@ -10,14 +10,14 @@ public class ParticleController : MonoBehaviour
     public float m_timeToLive = 5;
     private float m_timeToLiveDelta = 5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         trailRenderer = GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         m_timeToLiveDelta -= Time.deltaTime;
         if (m_timeToLiveDelta < 0)

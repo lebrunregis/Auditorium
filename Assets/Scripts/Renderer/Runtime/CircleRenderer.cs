@@ -9,7 +9,7 @@ public class CircleRenderer : MonoBehaviour
     public Gradient gradient = new Gradient();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.colorGradient = gradient;
@@ -19,12 +19,12 @@ public class CircleRenderer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
     }
 
-    void DrawCircle(int steps, float radius)
+    private void DrawCircle(int steps, float radius)
     {
         lineRenderer.positionCount = steps;
 

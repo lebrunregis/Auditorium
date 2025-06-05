@@ -91,8 +91,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.10434723
-        value: 0.019737244
+        time: 0
+        value: 0.09728241
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -199,7 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6076c1e2f15d4948b869468a555e51b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleVelocity: {x: 5, y: 0}
   spawnTime: 0.1
+  spawnDelta: 0
 --- !u!114 &6411861185745303348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3574060794252259645}
-  poolIncrement: 1
-  maxSize: 3
+  poolIncrement: 10
+  maxSize: 50
 --- !u!1001 &1037709895024447966
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -41,7 +41,7 @@ public class DragAndDropResizer : MonoBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         cam = Camera.main;
         mesh = new Mesh();
@@ -52,7 +52,7 @@ public class DragAndDropResizer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (dragging)
         {

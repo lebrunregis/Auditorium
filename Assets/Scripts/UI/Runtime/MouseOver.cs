@@ -7,12 +7,17 @@ public class MouseOver : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
-    void OnMouseEnter()
+    private void OnMouseEnter()
     {
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 
-    void OnMouseExit()
+    private void OnMouseOver()
+    {
+        //Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    }
+
+    private void OnMouseExit()
     {
         // Pass 'null' to the texture parameter to use the default system cursor.
         Cursor.SetCursor(null, Vector2.zero, cursorMode);

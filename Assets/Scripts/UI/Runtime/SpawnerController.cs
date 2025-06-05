@@ -11,14 +11,14 @@ public class SpawnerController : MonoBehaviour
     private float spawnRange;
     public float spawnDelta;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         spawnRange = GetComponent<CircleRenderer>().radius;
         particlePool = GetComponent<GameObjectPool>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         spawnDelta -= Time.deltaTime;
         if (spawnDelta < 0)
