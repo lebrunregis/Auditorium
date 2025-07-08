@@ -7,17 +7,24 @@ public class Goal : MonoBehaviour
     public float m_currentValue;
     public Gradient m_uncompletedGradient;
     public Gradient m_completedGradient;
+    public GameObject m_winLabel;
     #endregion
 
 
     #region Unity Api
-    private void OnTriggerEnter(Collider other)
+    private void Start()
+    {
+        m_lineRenderer = GetComponent<LineRenderer>();
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger Entered");
         m_currentValue++;
         if (m_currentValue > m_goalValue)
         {
             m_lineRenderer.colorGradient = m_completedGradient;
+            m_winLabel.SetActive(true);
         }
         else
         {

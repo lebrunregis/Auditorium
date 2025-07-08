@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(GameObjectPool))]
 public class SpawnerController : MonoBehaviour
 {
-    public Vector2 particleVelocity = new Vector2(5, 0);
+    public Vector2 particleVelocity = new(5, 0);
     private Tools.GameObjectPool particlePool;
     public float spawnTime = 0.1f;
     private float spawnRange;
