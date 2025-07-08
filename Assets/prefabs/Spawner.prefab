@@ -239,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5431111874109079689, guid: 55b7380a9a2cd7c49bc9b572891c2b43, type: 3}
       propertyPath: m_timeToLive
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7263210560934321520, guid: 55b7380a9a2cd7c49bc9b572891c2b43, type: 3}
       propertyPath: m_Time
