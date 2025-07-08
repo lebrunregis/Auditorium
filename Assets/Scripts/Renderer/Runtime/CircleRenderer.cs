@@ -1,6 +1,7 @@
 using UnityEngine;
 
-[RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(LineRenderer))]  
+[ExecuteInEditMode]
 public class CircleRenderer : MonoBehaviour
 {
     private LineRenderer lineRenderer;
@@ -8,8 +9,8 @@ public class CircleRenderer : MonoBehaviour
     public float radius = 1f;
     public Gradient gradient = new Gradient();
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start()
+
+    private void OnEnable()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.colorGradient = gradient;
@@ -23,7 +24,7 @@ public class CircleRenderer : MonoBehaviour
     {
 
     }
-
+    
     private void DrawCircle(int steps, float radius)
     {
         lineRenderer.positionCount = steps;
@@ -45,4 +46,5 @@ public class CircleRenderer : MonoBehaviour
             lineRenderer.SetPosition(i, pos);
         }
     }
+
 }

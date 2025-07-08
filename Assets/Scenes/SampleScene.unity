@@ -771,6 +771,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8994887597289448329, guid: 8b88b3b88756c07459e2fe32a0295d85, type: 3}
+      propertyPath: m_Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994887597289448329, guid: 8b88b3b88756c07459e2fe32a0295d85, type: 3}
+      propertyPath: m_Positions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9196514589717739564, guid: 8b88b3b88756c07459e2fe32a0295d85, type: 3}
       propertyPath: m_UseAutoMass
       value: 1
@@ -845,6 +853,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1668143441590510338, guid: 67b39ccfb8717384aa82f698c79210f3, type: 3}
+      propertyPath: m_Positions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1758704625132989816, guid: 67b39ccfb8717384aa82f698c79210f3, type: 3}
       propertyPath: m_winLabel
       value: 
